@@ -245,7 +245,7 @@ function App() {
       <div className="midSection">
         <div>
           <a>
-            <img src='welcome.png' className="logo"/>
+            <img src='welcome.png' className="welcome"/>
           </a>
           <MenuIcon icon ={logo}>
             <DropdownMenu></DropdownMenu>
