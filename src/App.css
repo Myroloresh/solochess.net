@@ -20,8 +20,20 @@
   filter: drop-shadow(0 0 2em #646cffaa);
 }
 */
+.logo.tsc {
+  width: 9vw;
+  height: 9vw;
+}
 .logo.tsc:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
+}
+.welcome{
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+  width: 35vw;
+  height: 9.87vw;
 }
 
 @keyframes logo-spin {
