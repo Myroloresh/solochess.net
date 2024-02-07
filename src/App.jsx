@@ -53,7 +53,7 @@ let first = new Boolean(true);
 let count = 0;
 
 const loader = new FBXLoader();
-loader.load( './/LexaBeach1.FBX', (lexa) => {
+loader.load( './LexaBeach1.FBX', (lexa) => {
   lexa.traverse(child => {
     if (child.isMesh){
       console.log(child.material)
