@@ -244,7 +244,9 @@ function App() {
     <>
       <div className="midSection">
         <div className="header">
-          <img src='welcome.png' className="welcome"/>
+            <img src='welcome.png' className="welcome"/>
+          <a className='invisible'>
+          </a>
           <MenuIcon icon ={logo}>
             <DropdownMenu></DropdownMenu>
           </MenuIcon>
@@ -312,7 +314,7 @@ function DropdownMenu(){
   function DropdownItem(props){
     return(
       <a href="#" className='menu-item' onClick={() => props.goToMenu && setActiveMenu(props.goToMenu)}>
-        <span className="icon-button">{props.leftIcon}</span>
+        <span className="icon-left">{props.leftIcon}</span>
 
         {props.children}
 

@@ -29,18 +29,19 @@ a:hover {
 }
 .dropdown {
   position: absolute;
-  top: 58px;
-  width: 300px;
+  top:10%;
+  width: 20vw;
   /*transform: translateX(-45%);*/
-  left: 40vw;
+  left: 80%;
   background-color: var(--bg);
   border-radius: var(--border-radius);
-  padding: 1rem;
+  padding: 2vw;
   overflow: hidden;
   transition: height var(--speed) ease;
 }
 .menu-item{
-  height: 50px;
+  height: 3.333vw;
+  font-size: 1.5vw;
   display: flex;
   align-items:center;
   border: var(--border);
@@ -55,14 +56,16 @@ a:hover {
 .icon-right{
   margin-left: auto;
   
-  height: 30px;
+  height: 2vw;
 }
 .menu-item:hover .icon-right{
   filter: invert(75%) sepia(73%) saturate(2101%) hue-rotate(358deg) brightness(101%) contrast(106%);
 }
 .icon-left{
-  width: 20px;
-  height: 30px;
+  width: 1.333vw;
+  height: 2vw;
+  margin-left: .5vw;
+  margin-right: 1.5vw;
 }
 .menu-item:hover .icon-left{
   filter: invert(75%) sepia(73%) saturate(2101%) hue-rotate(358deg) brightness(101%) contrast(106%);
