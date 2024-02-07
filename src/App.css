@@ -7,6 +7,12 @@
   top: 10rem;
   text-align: center;
   background-color: rgba(255, 255, 255, 0.525);
+  font-size: 2vw;
+  padding: 1%;
+}
+.header{
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
 }
 
 .logo {
@@ -20,20 +26,28 @@
   filter: drop-shadow(0 0 2em #646cffaa);
 }
 */
-.logo.tsc {
+/*.logo.tsc {
   width: 9vw;
   height: 9vw;
-}
+}*/
 .logo.tsc:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
 .welcome{
-  height: 6em;
-  padding: 1.5em;
+  padding: 5%;
   will-change: filter;
-  transition: filter 300ms;
-  width: 35vw;
-  height: 9.87vw;
+  transition: filter .3s;
+  grid-column: 1/9;
+  height: auto;
+  width: 100%;
+}
+.tscA{
+  grid-column: 9/13;
+  position: relative;
+  width: 60%;
+  height: 60%;
+  top: 20%;
+  left: 20%;
 }
 
 @keyframes logo-spin {

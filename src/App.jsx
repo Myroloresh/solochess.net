@@ -243,10 +243,8 @@ function App() {
   return (
     <>
       <div className="midSection">
-        <div>
-          <a>
-            <img src='welcome.png' className="welcome"/>
-          </a>
+        <div className="header">
+          <img src='welcome.png' className="welcome"/>
           <MenuIcon icon ={logo}>
             <DropdownMenu></DropdownMenu>
           </MenuIcon>
@@ -292,7 +290,7 @@ function MenuIcon(props){
 
   return(
     <>
-    <a href="#" onClick={() => setOpen(!open)}>
+    <a href="#" className='tscA' onClick={() => setOpen(!open)}>
       <img src={props.icon} className="logo tsc" alt="React logo" />
     </a>
     <div ref={menuRef}>
