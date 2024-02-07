@@ -34,40 +34,40 @@ renderer.render(scene,camera);
 
 let lexa;
 const textureLoader = new THREE.TextureLoader();
-const bodyT = textureLoader.load( 'Body_D.png' );
+const bodyT = textureLoader.load( '/Body_D.png' );
 bodyT.colorSpace = THREE.SRGBColorSpace;
-const headT = textureLoader.load( 'T_F_MED_LexaEarlGrey_Head_D.png' );
+const headT = textureLoader.load( '/T_F_MED_LexaEarlGrey_Head_D.png' );
 headT.colorSpace = THREE.SRGBColorSpace;
-const hairT = textureLoader.load( 'T_F_MED_LexaEarlGrey_FaceAcc_D.png' );
+const hairT = textureLoader.load( '/T_F_MED_LexaEarlGrey_FaceAcc_D.png' );
 hairT.colorSpace = THREE.SRGBColorSpace;
-const armsT = textureLoader.load( 'Arms_D.png' );
+const armsT = textureLoader.load( '/Arms_D.png' );
 armsT.colorSpace = THREE.SRGBColorSpace;
-const legsT = textureLoader.load( 'Legs_D.png' );
+const legsT = textureLoader.load( '/Legs_D.png' );
 legsT.colorSpace = THREE.SRGBColorSpace;
-const botT = textureLoader.load( 'CandidBikini_BottomB1.jpg' );
+const botT = textureLoader.load( '/CandidBikini_BottomB1.jpg' );
 botT.colorSpace = THREE.SRGBColorSpace;
-const braT = textureLoader.load( 'CandidBikini_BraB1.jpg' );
+const braT = textureLoader.load( '/CandidBikini_BraB1.jpg' );
 braT.colorSpace = THREE.SRGBColorSpace;
 
 let first = new Boolean(true);
 let count = 0;
 
 const loader = new FBXLoader();
-loader.load( 'LexaBeach1.FBX', (lexa) => {
+loader.load( '/public/LexaBeach1.FBX', (lexa) => {
   lexa.traverse(child => {
     if (child.isMesh){
       console.log(child.material)
       if(count == 0)
       {
         child.material.map = hairT;
-        child.material.normalMap = new THREE.TextureLoader().load( "T_F_MED_LexaEarlGrey_FaceAcc_D.png" );
-        child.material.specularMap = new THREE.TextureLoader().load( "T_F_MED_LexaEarlGrey_FaceAcc_S.png" );
+        child.material.normalMap = new THREE.TextureLoader().load( "/T_F_MED_LexaEarlGrey_FaceAcc_D.png" );
+        child.material.specularMap = new THREE.TextureLoader().load( "/T_F_MED_LexaEarlGrey_FaceAcc_S.png" );
         child.material.color = null;
       }
       if(count == 2 || count == 6)
       {
-        child.material.map = new THREE.TextureLoader().load( "Excella_teethtongue.jpg" );
-        child.material.normalMap = new THREE.TextureLoader().load( "Excella_teethtongue_n.jpg" );
+        child.material.map = new THREE.TextureLoader().load( "/Excella_teethtongue.jpg" );
+        child.material.normalMap = new THREE.TextureLoader().load( "/Excella_teethtongue_n.jpg" );
         child.material.color = null;
       }
       //child.material = material;
@@ -126,9 +126,9 @@ loader.load( 'LexaBeach1.FBX', (lexa) => {
 (error) => {
   console.log(error)});
 
-const adrian = textureLoader.load('ADRIANENDOPAFAKER.jpg');
+//const adrian = textureLoader.load('/ADRIANENDOPAFAKER.jpg');
 const geometry = new THREE.TorusGeometry(10, 3, 16, 100);
-const material = new THREE.MeshStandardMaterial({map: adrian});
+const material = new THREE.MeshStandardMaterial();
 let tsc = new THREE.Mesh(geometry, material);
 
 const GLTFL = new GLTFLoader;
@@ -198,7 +198,7 @@ dirLight.shadow.bias = - 0.0001;
 //scene.add(gridHelper);
 
 const controls = new OrbitControls(camera, renderer.domElement);
-const bgTexture = new THREE.TextureLoader().load('beach.png');
+const bgTexture = new THREE.TextureLoader().load('/beach.png');
 scene.background = bgTexture;
 
 //RESIZE WINDOW
